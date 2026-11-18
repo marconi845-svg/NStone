@@ -1,0 +1,41 @@
+<!-- Agentic Calling — NStone LAN voice extensions (included first in default context) -->
+<include>
+  <extension name="nstone_agentic_management">
+    <condition field="destination_number" expression="^1000$">
+      <action application="set" data="agentic_extension_key=management"/>
+      <action application="set" data="agentic_recordings_dir=C:/freeswitch/recordings/agentic"/>
+      <action application="set" data="call_timeout=300"/>
+      <action application="set" data="rtp_timeout_sec=300"/>
+      <action application="set" data="sip_enable_timer=false"/>
+      <action application="answer"/>
+      <action application="sleep" data="400"/>
+      <action application="lua" data="C:/freeswitch/scripts/agentic_call.lua"/>
+    </condition>
+  </extension>
+
+  <extension name="nstone_agentic_commercial">
+    <condition field="destination_number" expression="^2000$">
+      <action application="set" data="agentic_extension_key=commercial"/>
+      <action application="set" data="agentic_recordings_dir=C:/freeswitch/recordings/agentic"/>
+      <action application="set" data="call_timeout=300"/>
+      <action application="set" data="rtp_timeout_sec=300"/>
+      <action application="set" data="sip_enable_timer=false"/>
+      <action application="answer"/>
+      <action application="sleep" data="400"/>
+      <action application="lua" data="C:/freeswitch/scripts/agentic_call.lua"/>
+    </condition>
+  </extension>
+
+  <extension name="nstone_agentic_production">
+    <condition field="destination_number" expression="^3000$">
+      <action application="set" data="agentic_extension_key=production"/>
+      <action application="set" data="agentic_recordings_dir=C:/freeswitch/recordings/agentic"/>
+      <action application="set" data="call_timeout=300"/>
+      <action application="set" data="rtp_timeout_sec=300"/>
+      <action application="set" data="sip_enable_timer=false"/>
+      <action application="answer"/>
+      <action application="sleep" data="400"/>
+      <action application="lua" data="C:/freeswitch/scripts/agentic_call.lua"/>
+    </condition>
+  </extension>
+</include>

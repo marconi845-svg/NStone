@@ -1,0 +1,162 @@
+{
+  "theme": "viola",
+  "model": "Qwen 2.5 14B (Ollama locale)",
+  "temperature": 0.5,
+  "language": "Italiano (IT)",
+  "api_key": "",
+  "gmail": {
+    "email": "",
+    "app_password": ""
+  },
+  "llm": {
+    "provider": "ollama",
+    "inference": {
+      "max_concurrent": 1,
+      "max_queue": 3
+    },
+    "prewarm": {
+      "enabled": "auto",
+      "delay_seconds": 45,
+      "keep_alive": "10m",
+      "min_vram_gb": 4,
+      "retry_seconds": 20,
+      "max_retries": 3
+    },
+    "ollama": {
+      "base_url": "http://127.0.0.1:11434",
+      "model": "qwen2.5:14b-instruct-q4_0",
+      "_model_alternatives": [
+        "qwen2.5:14b-instruct-q4_0",
+        "nstone-marmo:latest"
+      ],
+      "timeout_seconds": 180,
+      "keep_alive_operational": "2m",
+      "keep_alive_production": "5m"
+    },
+    "gemini": {
+      "model": "gemini-1.5-flash"
+    },
+    "contexts": {
+      "offerte": { "temperature": 0.55, "num_ctx": 4096, "num_predict": 600 },
+      "ordini": { "temperature": 0.20, "num_ctx": 4096, "num_predict": 400 },
+      "produzione": { "temperature": 0.25, "num_ctx": 4096, "num_predict": 800 }
+    }
+  },
+  "logistics": {
+    "api_key": "",
+    "map_poll_seconds": 8,
+    "default_map_center": [45.46, 9.19],
+    "default_map_zoom": 13
+  },
+  "machines": {
+    "multifilo": {
+      "ip": "127.0.0.1",
+      "port": 102,
+      "rack": 0,
+      "slot": 1,
+      "mode": "sim"
+    },
+    "lucidatrice": {
+      "ip": "127.0.0.1",
+      "port": 102,
+      "rack": 0,
+      "slot": 1,
+      "mode": "sim"
+    },
+    "cnc": {
+      "ip": "127.0.0.1",
+      "port": 102,
+      "rack": 0,
+      "slot": 1,
+      "mode": "sim",
+      "map_profile": "oem_cnc_v1"
+    }
+  },
+  "autonomy": {
+    "level": 0,
+    "max_level": 2,
+    "office_auto_email": false,
+    "office_auto_stock": false,
+    "plant_auto_plc_write": false,
+    "plant_sim_only": true,
+    "require_pin_above": 2,
+    "admin_pin_hash": "",
+    "agents_paused": false
+  },
+  "agents": {
+    "enabled": ["office", "plant"],
+    "max_concurrent": 1,
+    "max_rounds_per_case": 5,
+    "office_enabled": true,
+    "plant_enabled": true,
+    "memory_enabled": false,
+    "plant_watch_multifilo": true,
+    "plant_watch_lucidatrice": true,
+    "plant_watch_cnc": false
+  },
+  "commercial": {
+    "tone": 1,
+    "max_tone": 2,
+    "follow_up_days": 3,
+    "upsell_enabled": false,
+    "urgency_phrasing": false
+  },
+  "knowledge": {
+    "technical_reply_enabled": true,
+    "technical_inbound_enabled": true
+  },
+  "pricing": {
+    "scarto_pct_default": 8,
+    "scarto_pct_marmo": 8,
+    "scarto_pct_granito": 5,
+    "scarto_pct_travertino": 7,
+    "scarto_pct_quarzo": 5,
+    "min_labor_charge_eur": 0
+  },
+  "orders": {
+    "imap_auto_start": true,
+    "gmail_poll_seconds": 90,
+    "use_ai_on_poll": false,
+    "use_ai_on_confirmation": true,
+    "confirmation_use_llm_on_poll": true,
+    "imap_mode": "poll",
+    "imap_max_per_poll": 5,
+    "imap_max_llm_per_poll": 1,
+    "orders_table_max_rows": 5,
+    "imap_poll_unseen_only": true,
+    "imap_filter_enabled": true,
+    "imap_fetch_recent_seen": false,
+    "imap_recent_days": 5,
+    "imap_body_keywords": true,
+    "show_all_in_table": false,
+    "subject_keywords": [
+      "ordine", "order", "purchase order", "po",
+      "confermo", "conferma", "accetto", "confirm", "confirmed", "accepted",
+      "preventivo", "richiesta", "quotation", "quote", "estimate", "pricing",
+      "offerta", "NS-Q", "NStone", "ns-q"
+    ]
+  },
+  "agentic_calling": {
+    "enabled": true,
+    "mode": "lan",
+    "sip_server": "127.0.0.1",
+    "sip_port": 5060,
+    "freeswitch_path": "",
+    "stt_engine": "whisper",
+    "tts_engine": "piper",
+    "voice_bridge_host": "127.0.0.1",
+    "voice_bridge_port": 8765,
+    "voice_bridge_auto_start": true,
+    "voice_ollama_model": "llama3.1:8b-instruct-q4_0",
+    "whisper_path": "",
+    "whisper_model": "",
+    "piper_path": "",
+    "piper_voice": "",
+    "recordings_dir": "",
+    "extensions": {
+      "management": { "number": "1000", "label": "Management" },
+      "commercial": { "number": "2000", "label": "Commercial" },
+      "production": { "number": "3000", "label": "Production" }
+    }
+  }
+}

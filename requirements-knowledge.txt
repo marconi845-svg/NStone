@@ -1,0 +1,3 @@
+# Retrieval Fabric — import PDF (opzionale, non richiesto per MD-only)
+pdfplumber>=0.11.0
+pymupdf>=1.24.0

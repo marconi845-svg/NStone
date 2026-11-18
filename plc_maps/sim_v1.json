@@ -1,0 +1,87 @@
+{
+  "schema": "nstone_sim_db_map",
+  "version": "1.0.0",
+  "title": "Simulatore Snap7 locale (layout ridotto)",
+  "data_blocks": [
+    {
+      "number": 1,
+      "symbolic_name": "Sim_Stato_DB",
+      "size_bytes": 7,
+      "direction": "plc_to_sw",
+      "poll_interval_ms": 200,
+      "variables": [
+        {"offset": 0, "type": "BYTE", "name": "stato", "comment_it": "0=Idle 1=Run 2=Alarm (MF); +3/4 errori LU"},
+        {"offset": 1, "type": "BOOL", "name": "allarme_attivo"},
+        {"offset": 2, "type": "BOOL", "name": "emergenza"},
+        {"offset": 3, "type": "BOOL", "name": "porte_aperte", "comment_it": "Multifilo"},
+        {"offset": 3, "type": "BOOL", "name": "pressione_fuori_range", "comment_it": "Lucidatrice"},
+        {"offset": 4, "type": "BOOL", "name": "assorbimento_anomalo", "comment_it": "Lucidatrice"},
+        {"offset": 5, "type": "BOOL", "name": "encoder_trave_error", "comment_it": "Lucidatrice"},
+        {"offset": 6, "type": "BOOL", "name": "finecorsa_attivo", "comment_it": "Lucidatrice"}
+      ]
+    },
+    {
+      "number": 2,
+      "symbolic_name": "Sim_Parametri_DB",
+      "size_bytes": 44,
+      "direction": "plc_to_sw",
+      "poll_interval_ms": 200,
+      "variables": [
+        {"offset": 0, "type": "REAL", "name": "velocita_filo", "unit": "m/s", "comment_it": "MF"},
+        {"offset": 4, "type": "REAL", "name": "tensione_filo", "unit": "N", "comment_it": "MF"},
+        {"offset": 8, "type": "REAL", "name": "pressione_acqua", "unit": "bar", "comment_it": "MF"},
+        {"offset": 12, "type": "REAL", "name": "assorbimento_motore", "unit": "A", "comment_it": "MF"},
+        {"offset": 16, "type": "REAL", "name": "metri", "unit": "m", "comment_it": "MF"},
+        {"offset": 20, "type": "REAL", "name": "spreco", "unit": "%", "comment_it": "MF"},
+        {"offset": 24, "type": "REAL", "name": "deviazione", "unit": "mm", "comment_it": "MF"},
+        {"offset": 0, "type": "REAL", "name": "posizione_trave", "unit": "mm", "comment_it": "LU"},
+        {"offset": 4, "type": "REAL", "name": "velocita_nastro", "unit": "m/min", "comment_it": "LU"},
+        {"offset": 8, "type": "REAL", "name": "pressione_testine", "unit": "bar", "comment_it": "LU"},
+        {"offset": 12, "type": "REAL", "name": "assorbimento_motore_principale", "unit": "A", "comment_it": "LU"},
+        {"offset": 16, "type": "REAL", "name": "assorbimento_motore_nastro", "unit": "A", "comment_it": "LU"},
+        {"offset": 20, "type": "REAL", "name": "metri_lavorati", "unit": "m", "comment_it": "LU"},
+        {"offset": 24, "type": "REAL", "name": "qualita_superficie", "unit": "%", "comment_it": "LU"},
+        {"offset": 28, "type": "REAL", "name": "assorbimento_testine", "unit": "A", "comment_it": "LU"},
+        {"offset": 32, "type": "REAL", "name": "velocita_trave", "unit": "mm/s", "comment_it": "LU"},
+        {"offset": 36, "type": "REAL", "name": "produzione_oraria", "unit": "m/h", "comment_it": "LU"},
+        {"offset": 40, "type": "REAL", "name": "contatore_pezzi", "unit": "pz", "comment_it": "LU"}
+      ]
+    },
+    {
+      "number": 3,
+      "symbolic_name": "Sim_Comandi_DB",
+      "size_bytes": 3,
+      "direction": "plc_to_sw",
+      "poll_interval_ms": 500,
+      "variables": [
+        {"offset": 0, "type": "BOOL", "name": "start"},
+        {"offset": 1, "type": "BOOL", "name": "stop"},
+        {"offset": 2, "type": "BOOL", "name": "reset"}
+      ]
+    }
+  ],
+  "machine_profiles": {
+    "multifilo": {
+      "priority_dbs": [1, 2, 3],
+      "block_overrides": {
+        "1": {"size_bytes": 4},
+        "2": {"size_bytes": 28}
+      },
+      "variable_filter": {
+        "1": ["stato", "allarme_attivo", "emergenza", "porte_aperte"],
+        "2": ["velocita_filo", "tensione_filo", "pressione_acqua", "assorbimento_motore", "metri", "spreco", "deviazione"]
+      }
+    },
+    "lucidatrice": {
+      "priority_dbs": [1, 2, 3],
+      "block_overrides": {
+        "1": {"size_bytes": 7},
+        "2": {"size_bytes": 44}
+      },
+      "variable_filter": {
+        "1": ["stato", "allarme_attivo", "emergenza", "pressione_fuori_range", "assorbimento_anomalo", "encoder_trave_error", "finecorsa_attivo"],
+        "2": ["posizione_trave", "velocita_nastro", "pressione_testine", "assorbimento_motore_principale", "assorbimento_motore_nastro", "metri_lavorati", "qualita_superficie", "assorbimento_testine", "velocita_trave", "produzione_oraria", "contatore_pezzi"]
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520" role="img" aria-label="NStone architecture">
+  <rect width="960" height="520" fill="#f4f6f8"/>
+  <text x="48" y="48" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#1f2933">NStone  architecture</text>
+  <text x="48" y="74" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#52606d">Office · Plant · Local LLM · Governed PLC writes</text>
+
+  <rect x="48" y="110" width="200" height="88" rx="10" fill="#fff" stroke="#3e4c59" stroke-width="1.5"/>
+  <text x="148" y="148" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2933">Desktop Hub</text>
+  <text x="148" y="170" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52606d">PyQt5 · ui/ · app/</text>
+
+  <rect x="280" y="110" width="200" height="88" rx="10" fill="#fff" stroke="#3e4c59" stroke-width="1.5"/>
+  <text x="380" y="148" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2933">Office Agents</text>
+  <text x="380" y="170" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52606d">modules/ · agents/</text>
+
+  <rect x="512" y="110" width="200" height="88" rx="10" fill="#fff" stroke="#3e4c59" stroke-width="1.5"/>
+  <text x="612" y="148" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2933">Local LLM</text>
+  <text x="612" y="170" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52606d">Ollama · llm/</text>
+
+  <rect x="744" y="110" width="168" height="88" rx="10" fill="#fff" stroke="#3e4c59" stroke-width="1.5"/>
+  <text x="828" y="148" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2933">Backend</text>
+  <text x="828" y="170" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52606d">FastAPI :8000</text>
+
+  <rect x="48" y="260" width="264" height="100" rx="10" fill="#fff" stroke="#243b53" stroke-width="2"/>
+  <text x="180" y="300" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2933">Autonomy + Governor</text>
+  <text x="180" y="322" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52606d">core/ · plc_write_governor</text>
+  <text x="180" y="340" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52606d">fail-closed PLC writes</text>
+
+  <rect x="348" y="260" width="264" height="100" rx="10" fill="#fff" stroke="#243b53" stroke-width="2"/>
+  <text x="480" y="300" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2933">Plant Machines</text>
+  <text x="480" y="322" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52606d">machines/ · plc/ · Snap7</text>
+  <text x="480" y="340" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52606d">Multifilo · Lucidatrice · CNC</text>
+
+  <rect x="648" y="260" width="264" height="100" rx="10" fill="#fff" stroke="#243b53" stroke-width="2"/>
+  <text x="780" y="300" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2933">Data + Audit</text>
+  <text x="780" y="322" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52606d">SQLite · knowledge/</text>
+  <text x="780" y="340" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52606d">orders · quotations · compliance</text>
+
+  <path d="M148 198 V230 H180 V260" fill="none" stroke="#9aa5b1" stroke-width="2"/>
+  <path d="M380 198 V230 H480 V260" fill="none" stroke="#9aa5b1" stroke-width="2"/>
+  <path d="M612 198 V230 H780 V260" fill="none" stroke="#9aa5b1" stroke-width="2"/>
+  <path d="M828 198 V230 H780" fill="none" stroke="#9aa5b1" stroke-width="2"/>
+
+  <text x="48" y="420" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52606d">Status: private beta / OEM pilot · Local-first · Proprietary license</text>
+  <text x="48" y="444" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#7b8794">No cloud dependency for core plant loop · Gmail/Gemini optional</text>
+</svg>

@@ -1,0 +1,55 @@
+NSTONE SOURCE-AVAILABLE PROPRIETARY LICENSE
+Copyright (c) 2025-2026 Nicolò Marconi / NStone. All rights reserved.
+
+NOTICE: THIS SOFTWARE IS CONFIDENTIAL AND PROPRIETARY.
+PUBLICATION ON GITHUB DOES NOT GRANT A LICENSE TO USE OR REUSE.
+
+1. OWNERSHIP
+   The software, source code, documentation, assets, schemas, and related
+   materials in this repository (the "Software") are the exclusive property of
+   Nicolò Marconi / NStone (the "Owner"). Access, clone, fork, or download does
+   not transfer ownership.
+
+2. NO LICENSE GRANTED
+   Except under a separate written agreement signed by the Owner, NO license is
+   granted. Without prior written authorization you may NOT:
+
+   a) use the Software for any purpose beyond reading the public repository;
+   b) copy, reproduce, or duplicate the Software in whole or in part for reuse;
+   c) modify, adapt, translate, or create derivative works for distribution;
+   d) distribute, publish, sublicense, sell, rent, lease, lend, or transfer;
+   e) offer the Software as a service (SaaS), hosted product, or API;
+   f) reverse engineer beyond what mandatory law allows;
+   g) remove proprietary notices;
+   h) use NStone trademarks or branding without written permission.
+
+3. VIEWING ONLY
+   The public GitHub copy is provided for evaluation and demonstration of
+   design. Viewing is allowed. Any other use requires a signed contract
+   (NDA, pilot, or commercial license).
+
+4. THIRD-PARTY COMPONENTS
+   Separately licensed libraries (see THIRD_PARTY.md) remain under their terms.
+   In particular, PyQt5 may be GPL-licensed; GPL obligations are independent of
+   this proprietary notice and may apply to combined redistributions.
+
+5. NO WARRANTY
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
+
+6. LIMITATION OF LIABILITY
+   TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE OWNER SHALL NOT BE LIABLE FOR
+   ANY DAMAGES ARISING FROM THE SOFTWARE OR THIS NOTICE.
+
+7. TERMINATION
+   Unauthorized use terminates automatically. Destroy all copies upon request.
+   Sections 1, 4, 5, 6, and 8 survive.
+
+8. GOVERNING LAW
+   Laws of Italy. Exclusive venue: courts of the Owner's domicile, unless a
+   signed agreement states otherwise.
+
+9. CONTACT
+   Licensing: open a GitHub Issue on the NStone repository, or use the contact
+   channel published by the Owner on the repository profile.
+
+ALL RIGHTS RESERVED. NO IMPLIED LICENSES.

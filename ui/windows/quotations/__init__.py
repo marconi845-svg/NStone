@@ -1,0 +1,1 @@
+# Quotations windows namespace.

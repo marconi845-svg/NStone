@@ -1,0 +1,35 @@
+{
+  "schema": "nstone_cnc_db_map",
+  "version": "0.2.0-public",
+  "title": "NStone synthetic CNC DB map (placeholder demo)",
+  "placeholder": true,
+  "notes": [
+    "Synthetic map authored for NStone public demos.",
+    "Not copied from any OEM manual or customer commissioning pack.",
+    "While placeholder=true the write governor refuses all PLC writes."
+  ],
+  "data_blocks": [
+    {
+      "number": 100,
+      "symbolic_name": "CNC_Status_DB",
+      "size_bytes": 64,
+      "direction": "plc_to_sw",
+      "poll_interval_ms": 200,
+      "variables": [
+        {"offset": 0, "type": "BYTE", "name": "stato_macchina", "role": "machine_state", "state_map": {"0": "STOP", "1": "RUN", "2": "HOLD", "3": "ERROR"}},
+        {"offset": 2, "type": "INT", "name": "codice_allarme", "role": "alarm_code"},
+        {"offset": 4, "type": "REAL", "name": "velocita_mandrino", "role": "spindle_speed", "unit": "RPM"},
+        {"offset": 8, "type": "REAL", "name": "carico_mandrino", "role": "spindle_load", "unit": "%"},
+        {"offset": 12, "type": "REAL", "name": "feed_rate", "role": "feed_rate", "unit": "mm/min"},
+        {"offset": 16, "type": "REAL", "name": "feed_override", "role": "feed_rate_override", "unit": "%"}
+      ]
+    }
+  ],
+  "machine_profiles": {
+    "cnc": {"blocks": [100]}
+  },
+  "override_protocol": {
+    "enabled_in_map": false,
+    "notes": "No live override contract shipped in the public tree."
+  }
+}

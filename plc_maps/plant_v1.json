@@ -1,0 +1,50 @@
+{
+  "schema": "nstone_sim_db_map",
+  "version": "1.0.0",
+  "title": "NStone synthetic plant map (local demo — not OEM documentation)",
+  "notes": [
+    "Authored for NStone simulator demos only.",
+    "Not derived from any third-party machine builder documentation."
+  ],
+  "data_blocks": [
+    {
+      "number": 1,
+      "symbolic_name": "Sim_Stato_DB",
+      "size_bytes": 7,
+      "direction": "plc_to_sw",
+      "poll_interval_ms": 200,
+      "variables": [
+        {"offset": 0, "type": "BYTE", "name": "stato", "comment_it": "0=Idle 1=Run 2=Alarm"},
+        {"offset": 1, "type": "BOOL", "name": "allarme_attivo"},
+        {"offset": 2, "type": "BOOL", "name": "emergenza"},
+        {"offset": 3, "type": "BOOL", "name": "porte_aperte"},
+        {"offset": 5, "type": "BOOL", "name": "encoder_trave_error"},
+        {"offset": 6, "type": "BOOL", "name": "finecorsa_attivo"}
+      ]
+    },
+    {
+      "number": 2,
+      "symbolic_name": "Sim_Parametri_DB",
+      "size_bytes": 44,
+      "direction": "plc_to_sw",
+      "poll_interval_ms": 200,
+      "variables": [
+        {"offset": 0, "type": "REAL", "name": "velocita_filo", "unit": "m/s"},
+        {"offset": 4, "type": "REAL", "name": "tensione_filo", "unit": "N"},
+        {"offset": 8, "type": "REAL", "name": "pressione_acqua", "unit": "bar"},
+        {"offset": 12, "type": "REAL", "name": "assorbimento_motore", "unit": "A"},
+        {"offset": 16, "type": "REAL", "name": "metri", "unit": "m"},
+        {"offset": 20, "type": "REAL", "name": "spreco", "unit": "%"},
+        {"offset": 24, "type": "REAL", "name": "deviazione", "unit": "mm"},
+        {"offset": 0, "type": "REAL", "name": "posizione_trave", "unit": "mm"},
+        {"offset": 4, "type": "REAL", "name": "velocita_nastro", "unit": "m/min"},
+        {"offset": 8, "type": "REAL", "name": "pressione_testine", "unit": "bar"}
+      ]
+    }
+  ],
+  "machine_profiles": {
+    "multifilo": {"blocks": [1, 2]},
+    "lucidatrice": {"blocks": [1, 2]},
+    "cnc": {"blocks": [1]}
+  }
+}

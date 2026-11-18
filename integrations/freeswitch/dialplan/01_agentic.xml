@@ -1,0 +1,29 @@
+<!-- Agentic Calling — NStone LAN voice extensions -->
+<include>
+  <extension name="agentic_management">
+    <condition field="destination_number" expression="^1000$">
+      <action application="set" data="agentic_extension_key=management"/>
+      <action application="answer"/>
+      <action application="sleep" data="400"/>
+      <action application="lua" data="C:/freeswitch/scripts/agentic_call.lua"/>
+    </condition>
+  </extension>
+
+  <extension name="agentic_commercial">
+    <condition field="destination_number" expression="^2000$">
+      <action application="set" data="agentic_extension_key=commercial"/>
+      <action application="answer"/>
+      <action application="sleep" data="400"/>
+      <action application="lua" data="C:/freeswitch/scripts/agentic_call.lua"/>
+    </condition>
+  </extension>
+
+  <extension name="agentic_production">
+    <condition field="destination_number" expression="^3000$">
+      <action application="set" data="agentic_extension_key=production"/>
+      <action application="answer"/>
+      <action application="sleep" data="400"/>
+      <action application="lua" data="C:/freeswitch/scripts/agentic_call.lua"/>
+    </condition>
+  </extension>
+</include>

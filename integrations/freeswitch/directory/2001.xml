@@ -1,0 +1,16 @@
+<include>
+  <!-- Zoiper / Kotlin SIP client — dial 1000/2000/3000 after register -->
+  <user id="2001">
+    <params>
+      <param name="password" value="CHANGE_ME_SIP_PASSWORD"/>
+      <param name="vm-password" value="2001"/>
+    </params>
+    <variables>
+      <variable name="toll_allow" value="domestic,international,local"/>
+      <variable name="accountcode" value="2001"/>
+      <variable name="user_context" value="default"/>
+      <variable name="effective_caller_id_name" value="NStone Client"/>
+      <variable name="effective_caller_id_number" value="2001"/>
+    </variables>
+  </user>
+</include>
