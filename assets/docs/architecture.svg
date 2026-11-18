@@ -1,44 +1,67 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520" role="img" aria-label="NStone architecture">
-  <rect width="960" height="520" fill="#f4f6f8"/>
-  <text x="48" y="48" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#1f2933">NStone  architecture</text>
-  <text x="48" y="74" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#52606d">Office · Plant · Local LLM · Governed PLC writes</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="640" viewBox="0 0 1100 640" role="img" aria-label="NStone architecture">
+  <rect width="1100" height="640" fill="#f4f6f8"/>
+  <text x="48" y="44" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#1f2933">NStone — architecture</text>
+  <text x="48" y="68" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#52606d">Hub · Quotations · Orders · RAG · Plant · Local LLM · Governed PLC writes</text>
 
-  <rect x="48" y="110" width="200" height="88" rx="10" fill="#fff" stroke="#3e4c59" stroke-width="1.5"/>
-  <text x="148" y="148" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2933">Desktop Hub</text>
-  <text x="148" y="170" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52606d">PyQt5 · ui/ · app/</text>
+  <!-- Top row -->
+  <rect x="48" y="100" width="220" height="96" rx="10" fill="#fff" stroke="#3e4c59" stroke-width="1.5"/>
+  <text x="158" y="138" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2933">Desktop Hub</text>
+  <text x="158" y="160" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52606d">PyQt5 · ui/ · app/</text>
+  <text x="158" y="178" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52606d">workforce hub</text>
 
-  <rect x="280" y="110" width="200" height="88" rx="10" fill="#fff" stroke="#3e4c59" stroke-width="1.5"/>
-  <text x="380" y="148" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2933">Office Agents</text>
-  <text x="380" y="170" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52606d">modules/ · agents/</text>
+  <rect x="300" y="100" width="220" height="96" rx="10" fill="#fff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="410" y="138" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2933">Quotations</text>
+  <text x="410" y="160" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52606d">Offerte · pricing</text>
+  <text x="410" y="178" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52606d">email / WhatsApp in</text>
 
-  <rect x="512" y="110" width="200" height="88" rx="10" fill="#fff" stroke="#3e4c59" stroke-width="1.5"/>
-  <text x="612" y="148" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2933">Local LLM</text>
-  <text x="612" y="170" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52606d">Ollama · llm/</text>
+  <rect x="552" y="100" width="220" height="96" rx="10" fill="#fff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="662" y="138" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2933">Orders</text>
+  <text x="662" y="160" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52606d">Ordini · conferma</text>
+  <text x="662" y="178" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52606d">IMAP · production assign</text>
 
-  <rect x="744" y="110" width="168" height="88" rx="10" fill="#fff" stroke="#3e4c59" stroke-width="1.5"/>
-  <text x="828" y="148" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2933">Backend</text>
-  <text x="828" y="170" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52606d">FastAPI :8000</text>
+  <rect x="804" y="100" width="248" height="96" rx="10" fill="#fff" stroke="#3e4c59" stroke-width="1.5"/>
+  <text x="928" y="138" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2933">Agents Command</text>
+  <text x="928" y="160" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52606d">Autonomy L0–L4</text>
+  <text x="928" y="178" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52606d">office + plant policy</text>
 
-  <rect x="48" y="260" width="264" height="100" rx="10" fill="#fff" stroke="#243b53" stroke-width="2"/>
-  <text x="180" y="300" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2933">Autonomy + Governor</text>
-  <text x="180" y="322" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52606d">core/ · plc_write_governor</text>
-  <text x="180" y="340" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52606d">fail-closed PLC writes</text>
+  <!-- Mid row: LLM + RAG -->
+  <rect x="48" y="250" width="300" height="120" rx="10" fill="#fff" stroke="#0f766e" stroke-width="2"/>
+  <text x="198" y="290" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2933">Local LLM</text>
+  <text x="198" y="312" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52606d">Ollama · Qwen 2.5 · llm/</text>
+  <text x="198" y="334" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52606d">contexts: offers · orders · plant</text>
+  <text x="198" y="352" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52606d">optional Gemini API</text>
 
-  <rect x="348" y="260" width="264" height="100" rx="10" fill="#fff" stroke="#243b53" stroke-width="2"/>
-  <text x="480" y="300" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2933">Plant Machines</text>
-  <text x="480" y="322" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52606d">machines/ · plc/ · Snap7</text>
-  <text x="480" y="340" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52606d">Multifilo · Lucidatrice · CNC</text>
+  <rect x="380" y="250" width="340" height="120" rx="10" fill="#fff" stroke="#0f766e" stroke-width="2"/>
+  <text x="550" y="290" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2933">RAG / Knowledge</text>
+  <text x="550" y="312" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52606d">Retrieval Fabric · knowledge DB</text>
+  <text x="550" y="334" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52606d">PDF / MD ingest · policy docs</text>
+  <text x="550" y="352" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52606d">grounds quotations &amp; technical replies</text>
 
-  <rect x="648" y="260" width="264" height="100" rx="10" fill="#fff" stroke="#243b53" stroke-width="2"/>
-  <text x="780" y="300" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2933">Data + Audit</text>
-  <text x="780" y="322" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52606d">SQLite · knowledge/</text>
-  <text x="780" y="340" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52606d">orders · quotations · compliance</text>
+  <rect x="752" y="250" width="300" height="120" rx="10" fill="#fff" stroke="#3e4c59" stroke-width="1.5"/>
+  <text x="902" y="290" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2933">Data + Audit</text>
+  <text x="902" y="312" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52606d">SQLite · database/*.sql</text>
+  <text x="902" y="334" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52606d">stock · quotations · orders</text>
+  <text x="902" y="352" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52606d">compliance · action log</text>
 
-  <path d="M148 198 V230 H180 V260" fill="none" stroke="#9aa5b1" stroke-width="2"/>
-  <path d="M380 198 V230 H480 V260" fill="none" stroke="#9aa5b1" stroke-width="2"/>
-  <path d="M612 198 V230 H780 V260" fill="none" stroke="#9aa5b1" stroke-width="2"/>
-  <path d="M828 198 V230 H780" fill="none" stroke="#9aa5b1" stroke-width="2"/>
+  <!-- Bottom row: plant -->
+  <rect x="48" y="420" width="480" height="110" rx="10" fill="#fff" stroke="#243b53" stroke-width="2"/>
+  <text x="288" y="460" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2933">Autonomy + Write Governor</text>
+  <text x="288" y="484" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52606d">core/ · plc_write_governor · fail-closed PLC writes</text>
+  <text x="288" y="506" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52606d">AI Governance · Privacy Security Center</text>
 
-  <text x="48" y="420" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52606d">Status: private beta / OEM pilot · Local-first · Proprietary license</text>
-  <text x="48" y="444" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#7b8794">No cloud dependency for core plant loop · Gmail/Gemini optional</text>
+  <rect x="560" y="420" width="492" height="110" rx="10" fill="#fff" stroke="#243b53" stroke-width="2"/>
+  <text x="806" y="460" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2933">Plant Machines</text>
+  <text x="806" y="484" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52606d">machines/ · plc/ · Snap7 · synthetic plc_maps/</text>
+  <text x="806" y="506" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52606d">Multifilo · Polisher/Calibrator · CNC</text>
+
+  <!-- Connectors -->
+  <path d="M158 196 V225 H410 V250" fill="none" stroke="#9aa5b1" stroke-width="2"/>
+  <path d="M410 196 V225" fill="none" stroke="#9aa5b1" stroke-width="2"/>
+  <path d="M662 196 V225 H550 V250" fill="none" stroke="#9aa5b1" stroke-width="2"/>
+  <path d="M928 196 V225 H902 V250" fill="none" stroke="#9aa5b1" stroke-width="2"/>
+  <path d="M198 370 V395 H288 V420" fill="none" stroke="#9aa5b1" stroke-width="2"/>
+  <path d="M550 370 V395 H806 V420" fill="none" stroke="#9aa5b1" stroke-width="2"/>
+
+  <text x="48" y="580" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52606d">Public demo / private-beta · Local-first · Proprietary view-only license</text>
+  <text x="48" y="602" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#7b8794">Core plant loop offline · Gmail / Gemini optional · RAG grounds office replies</text>
 </svg>

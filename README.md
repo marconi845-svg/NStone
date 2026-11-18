@@ -4,30 +4,51 @@
 
 **Status: public demo / private-beta product** — source is viewable; reuse requires a written license (see [`LICENSE`](LICENSE)).
 
-Agentic OS for natural stone companies: office (requests, quotations, orders),
-plant (multifilo, polisher, CNC via Snap7 **simulator** or live), and governance
-(autonomy levels, fail-closed PLC writes, audit) in one local-first desktop app
-with optional Ollama LLM.
+Agentic OS for natural stone companies: office (requests, **quotations**, **orders**),
+plant (multifilo, polisher, CNC via Snap7 **simulator** or live), **RAG / knowledge**,
+and governance (autonomy levels, fail-closed PLC writes, audit) in one local-first
+desktop app with optional Ollama LLM.
 
-## Hub
+## Screenshots
 
-![NStone hub](assets/docs/hub-screenshot.jpg)
+### Workforce hub
+
+![NStone workforce hub](assets/docs/hub.png)
+
+### Agents Command Center
+
+![Agents Command Center](assets/docs/agents-command-center.png)
+
+### Advanced Dataset Options (Neural Engine)
+
+![Advanced Dataset Options](assets/docs/advanced-dataset-options.png)
 
 ## Architecture
 
 ![NStone architecture](assets/docs/architecture.svg)
 
 ```mermaid
-flowchart LR
-  Hub[Desktop Hub / PyQt5] --> Office[Office pipelines]
+flowchart TB
+  Hub[Desktop Hub / PyQt5]
+  Hub --> Quotes[Quotations / Offerte]
+  Hub --> Orders[Orders / Ordini]
+  Hub --> Agents[Agents Command Center]
   Hub --> Plant[Plant machines]
   Hub --> LLM[Local LLM / Ollama]
-  Office --> DB[(SQLite audit)]
-  Plant --> Gov[Write governor]
+  LLM --> RAG[RAG / Knowledge]
+  RAG --> Quotes
+  RAG --> Orders
+  Quotes --> DB[(SQLite)]
+  Orders --> DB
+  Agents --> Gov[Autonomy + Write governor]
+  Plant --> Gov
   Gov --> PLC[Snap7 PLC / sim]
-  LLM --> Office
-  LLM --> Plant
 ```
+
+**Office:** quotations (offerte), orders (ordini), email/IMAP pipelines, pricing.  
+**RAG:** knowledge ingest + retrieval fabric grounding LLM replies.  
+**Plant:** multifilo, polisher/calibrator, CNC — writes gated by governor.  
+**LLM:** local Ollama (e.g. Qwen 2.5 14B); Gemini optional via `config.json`.
 
 ## Quick start
 
@@ -42,6 +63,12 @@ python run.py
 ```
 
 On Windows you can also use `00_AVVIA_NSTONELLM.bat`.
+
+Initialize the local demo database (SQL only):
+
+```bash
+python database/init_db.py
+```
 
 ### Config (do not commit secrets)
 
@@ -60,8 +87,8 @@ ollama pull qwen2.5:14b-instruct-q4_0
 | Path | Role |
 |------|------|
 | `app/` | Main window |
-| `ui/` | PyQt windows |
-| `modules/` | Orders, quotations, knowledge, pricing |
+| `ui/` | PyQt windows (hub, quotations, orders, agents, …) |
+| `modules/` | Orders, quotations, knowledge/RAG, pricing |
 | `agents/` | Office/plant agent runtime |
 | `core/` | Autonomy, config, governance |
 | `plc/` | Snap7 helpers, write governor |
