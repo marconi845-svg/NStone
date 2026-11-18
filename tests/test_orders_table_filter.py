@@ -1,4 +1,6 @@
 """Test filtro tabella ordini e gate persistenza."""
+import pytest
+
 from modules.orders_database import orders_table_visibility_sql, should_persist_incoming_order
 
 
@@ -72,6 +74,7 @@ def test_imap_fully_processed_ordine_without_db_row():
     assert imap_message_fully_processed("nonexistent-msg-id-xyz") is False
 
 
+@pytest.mark.skip(reason="Richiede Ollama / dati locali: da eseguire solo in locale")
 def test_backfill_creates_order_from_email_log(tmp_path, monkeypatch):
     import sqlite3
     from modules import orders_database as odb

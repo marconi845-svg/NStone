@@ -4,6 +4,8 @@ from __future__ import annotations
 import json
 import urllib.request
 
+import pytest
+
 from modules.voice_bridge.manager import (
     check_voice_bridge_health,
     start_voice_bridge,
@@ -20,6 +22,7 @@ def test_health_after_start():
     stop_voice_bridge()
 
 
+@pytest.mark.skip(reason="Richiede Ollama / dati locali: da eseguire solo in locale")
 def test_voice_turn_text_only():
     result = start_voice_bridge(force=True)
     assert result.started
